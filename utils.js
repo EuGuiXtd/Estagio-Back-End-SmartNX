@@ -1,4 +1,4 @@
-const names = [{
+const peoples = [{
     id: 1, nome: 'juca', sobrenome: 'da silva', idade: 42
 },  {
     id:2, nome: 'daniel', sobrenome: 'gonçalves', idade: 21
@@ -9,5 +9,5 @@ const names = [{
 }];
 
 module.exports = {
-    names
+    peoples
 };
