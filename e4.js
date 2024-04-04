@@ -6,8 +6,8 @@ function stringReplace (str, search, replace) {
     return newStr;
     }
 
-let str = 'teste 1 de 2 string 3';
-let search = ['1', '2', '3'];
-let replace = '[removido]';
+const str = 'teste 1 de 2 string 3';
+const search = ['1', '2', '3'];
+const replace = '[removido]';
 
 console.log(stringReplace(str, search, replace));
