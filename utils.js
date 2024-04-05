@@ -8,6 +8,16 @@ const peoples = [{
     id: 4, nome:'gabriel', sobrenome: 'pinheiro', idade: 21
 }];
 
+const people = {
+    "nome": "Dev",
+    "sobrenome":"smart",
+    "idade":"26",
+    "cargo":"analista de sistemas",
+    "documento":"123.345.678-90"
+    }
+
+
 module.exports = {
-    peoples
+    peoples,
+    people
 };
