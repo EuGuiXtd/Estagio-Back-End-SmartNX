@@ -1,6 +1,7 @@
 const PostModel = (sequelize, DataTypes) => {
     const Post = sequelize.define('Post', {
       user: DataTypes.STRING,
+      title: DataTypes.STRING,
       body: DataTypes.STRING,
     },
     {

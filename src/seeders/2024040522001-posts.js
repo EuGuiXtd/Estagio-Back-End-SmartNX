@@ -6,10 +6,12 @@ module.exports = {
     await queryInterface.bulkInsert('Posts', [
       {
         user: 'John Doe',
+        title: 'Hello',
         body: 'Hello, world!',
       },
       {
         user: 'Jane Doe',
+        title: 'Goodbye!',
         body: 'Goodbye, world!',
       },
     ], {});

@@ -13,6 +13,9 @@ module.exports = {
       user: {
         type: Sequelize.STRING
       },
+      title: {
+        type: Sequelize.STRING
+      },
       body: {
         type: Sequelize.STRING
       }

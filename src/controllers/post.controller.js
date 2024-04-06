@@ -21,8 +21,8 @@ const getPostById = async (req, res) => {
 
 const createPost = async (req, res) => {
     try {
-        const { user, body } = req.body;
-        const post = await PostService.createPost(user, body);
+        const { user, title, body } = req.body;
+        const post = await PostService.createPost(user, title, body);
         return res.status(201).json(post);
     } catch (error) {
         return res.status(500).json({ error: error.message });
