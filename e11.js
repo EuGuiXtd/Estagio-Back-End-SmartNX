@@ -1,4 +1,4 @@
-const peoples = require ('./utils').peoples;
+const {peoples} = require ('./utils');
 
 function sortPeoplesByAge (peoples) {
     return peoples.sort((a, b) => {

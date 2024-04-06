@@ -2,18 +2,18 @@
 
 const axios = require('axios')
 
-const cep = '36016530'
+const cep = '36045330'
 const api = axios.create({
-    baseURL: `https://viacep.com.br/ws/${cep}/json/`
+    baseURL: `https://viacep.com.br/ws/`
 })
-const getCEP = async () => {
+const getCEP = async (cep) => {
     try {
-        const response = await api.get()
+        const response = await api.get(`${cep}/json/`)
         const { logradouro, bairro, localidade, uf } = response.data
-        return console.log(`${logradouro}, ${bairro}, ${localidade}/${uf}`)
+        console.log(`${logradouro}, ${bairro}, ${localidade}/${uf}`)
     } catch (error) {
         console.error("Ocorreu um erro na requisição", error)
     }
 }
 
-getCEP()
+getCEP(cep)

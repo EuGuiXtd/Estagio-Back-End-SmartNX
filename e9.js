@@ -1,10 +1,8 @@
-const peoples = require ('./utils').peoples;
-
+const {peoples} = require('./utils');
 function verifyAge (peoples) {
-    if (peoples.some(people => people.idade < 25) === true ) {
-        return peoples;
+    if (peoples.some(people => people.idade < 25)) {
+        console.log(peoples);
     }
-    return false;
 }
 
-console.log(verifyAge(peoples)); // true
+verifyAge(peoples); 

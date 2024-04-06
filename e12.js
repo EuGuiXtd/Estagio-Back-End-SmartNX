@@ -1,7 +1,7 @@
-const people = require('./utils').people;
+const {people} = require('./utils');
 
-function removeKey (people) {
-    const { documento, ...rest } = people;
-    return rest;
+function removeKey (people,key) {
+    delete people[key]
+    return people;
 }
-console.log(removeKey(people)); // { nome: 'juca', sobrenome: 'da silva', idade: 25 }
+console.log(removeKey(people,'documento')); // { nome: 'juca', sobrenome: 'da silva', idade: 25 }

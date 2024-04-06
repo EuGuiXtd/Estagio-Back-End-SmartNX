@@ -1,7 +1,7 @@
-const e1 = require('./e1');
+const {greaterLength} = require('./utils');
 
 function nestedFunction (func, str1, str2) {
-    return func(str1, "user") && func(str2, 'user');
-}
-
-console.log(nestedFunction(e1.greaterLength, 'hello', 'player')); // 'hello, player'
+    console.log(func(str1, str2));  // 'player'
+  }
+  
+nestedFunction(greaterLength, 'hello', 'player'); 

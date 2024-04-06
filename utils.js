@@ -16,8 +16,13 @@ const people = {
     "documento":"123.345.678-90"
     }
 
+function greaterLength (str1, str2) {
+    return str1.length > str2.length ? str1 : str2;
+    }
+
 
 module.exports = {
     peoples,
-    people
+    people,
+    greaterLength
 };
