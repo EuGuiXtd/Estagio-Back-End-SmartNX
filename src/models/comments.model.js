@@ -2,6 +2,9 @@ const CommentModel = (sequelize, DataTypes) => {
     const Comment = sequelize.define('Comment', {
       user: DataTypes.STRING,
       body: DataTypes.STRING,
+    },
+    {
+        timestamps: false,
     });
 
     Comment.associate = (models) => {

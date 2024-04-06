@@ -2,6 +2,9 @@ const PostModel = (sequelize, DataTypes) => {
     const Post = sequelize.define('Post', {
       user: DataTypes.STRING,
       body: DataTypes.STRING,
+    },
+    {
+        timestamps: false,
     });
 
     Post.associate = (models) => {

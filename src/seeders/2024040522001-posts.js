@@ -7,14 +7,10 @@ module.exports = {
       {
         user: 'John Doe',
         body: 'Hello, world!',
-        createdAt: new Date(),
-        updatedAt: new Date(),
       },
       {
         user: 'Jane Doe',
         body: 'Goodbye, world!',
-        createdAt: new Date(),
-        updatedAt: new Date(),
       },
     ], {});
   },
