@@ -2,7 +2,7 @@
 
 const axios = require('axios')
 
-const cep = '36045330'
+const cep = '36016530'
 const api = axios.create({
     baseURL: `https://viacep.com.br/ws/`
 })
@@ -16,4 +16,4 @@ const getCEP = async (address) => {
     }
 }
 
-getCEP(cep)
+getCEP(cep) // Rua Engenheiro Maurício Giron, Dom Bosco, Juiz de Fora/MG

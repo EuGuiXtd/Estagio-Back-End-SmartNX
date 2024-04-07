@@ -11,8 +11,8 @@ const getAllPosts = async (_req, res) => {
 
 const getPostById = async (req, res) => {
     try {
-        const { id } = req.params;
-        const post = await PostService.getPostById(id);
+        const { postId } = req.params;
+        const post = await PostService.getPostById(postId);
         return res.status(200).json(post);
     } catch (error) {
         return res.status(500).json({ error: error.message });
@@ -31,8 +31,8 @@ const createPost = async (req, res) => {
 
 const deletePost = async (req, res) => {
     try {
-        const { id } = req.params;
-        const post = await PostService.deletePost(id);
+        const { postId } = req.params;
+        const post = await PostService.deletePost(postId);
         return res.status(200).json(post);
     } catch (error) {
         return res.status(500).json({ error: error.message });

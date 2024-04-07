@@ -1,8 +1,8 @@
 const { Post } = require('../models');
 
 const validateId = async (req, res, next) => {
-    const { id } = req.params;
-    const post = await Post.findByPk(id);
+    const { postId } = req.params;
+    const post = await Post.findByPk(postId);
     if (!post) return res.status(404).json({ error: 'Post not found' });
     return next();
 }

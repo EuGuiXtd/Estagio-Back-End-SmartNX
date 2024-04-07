@@ -4,4 +4,4 @@ function stringReplace (str, replace) {
 const str = 'teste 1 de 2 string 3';
 const replace = '[removido]';
 
-console.log(stringReplace(str, replace));
+console.log(stringReplace(str, replace)); // teste [removido] de [removido] string [removido]
