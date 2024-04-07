@@ -52,7 +52,7 @@ MySQl,Sequelize.
 - Endpoint que aceita uma requisição do tipo GET para obter todos os posts. A URL do enpoint é `http://localhost:3001/posts`. Esta requisição irá retornar todos os posts existentes no banco de dados;
 - Endpoint que aceita uma requisição do tipo GET para obter apenas um post pelo seu ID específico. A URL do endpoint é `http://localhost:3001/posts/:postId` ***Obs: A parte em que está escrito ":postId" deve ser substituída pelo número do ID do post que você deseja encontrar. Por exemplo, `http://localhost:3001/posts/1` irá retornar o post com o ID 1***.Esta requisição irá retornar como resposta o post com o ID que você passou no endpoint;
 - Endpoint que aceita uma requisição do tipo POST para cadastrar um novo post. A URL do endpoint é `http://localhost:3001/posts` ***Obs: Esta requisição exige um corpo (body) contendo um objeto seguindo o seguinte modelo:
-```
+```json
 {
   "user":"string",
   "title": "string",
@@ -65,7 +65,7 @@ onde todas essas chaves são obrigatórias para a criação do novo post***.Apó
 ## Endpoints de comments:
 - Lembrando que todos os endpoints começam com "http://localhost:3001", onde o número 3001 é a porta onde o servidor Express está rodando em sua máquina. Caso ele esteja rodando em outra porta, lembre-se de trocar esse número no endpoint;
 - Endpoint que aceita uma requisição do tipo POST para cadastrar um novo comentário em um post específico. A URL do enpoint é `http://localhost:3001/posts/:postId/comments` ***Obs: Esta requisição exige um corpo (body) contendo um objeto seguindo o seguinte modelo:
-```  
+```json  
 {
   "user":"string",
   "text":"string"
