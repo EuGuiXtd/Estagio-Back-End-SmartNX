@@ -20,8 +20,17 @@ const validPostExists = async (req, res, next) => {
     next();
 }
 
+const validCommentExistisInThisPost = async (req, res, next) => {
+    const { postId, commentId } = req.params;
+    const comment = await Comment.findByPk(commentId);
+    console.log(comment.postId, postId);
+    if (comment.postId != postId) return res.status(400).json({ error: 'Comment does not belong to this post' });
+    next();
+}
+
 module.exports = {
     validId,
     validFields,
     validPostExists,
+    validCommentExistisInThisPost,
 };
