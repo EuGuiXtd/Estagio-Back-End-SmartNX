@@ -1,11 +1,11 @@
 const express = require('express');
 
-const router = express.Router();
+const router = express.Router({mergeParams: true});
 
-const commentMiddleware = require('../middlewares/comment.middleware');
+const { validFields, validPostExists, validId } = require('../middlewares/comment.middleware');
 const coomentController = require('../controllers/comment.controller');
 
-router.post('/:postId', commentMiddleware.validFields, commentMiddleware.validPostExists, coomentController.addComment);
-router.delete('/:id', commentMiddleware.validId, coomentController.deleteComment);
+router.post('/', validFields, validPostExists, coomentController.addComment);
+router.delete('/:id',validPostExists, validId, coomentController.deleteComment);
 
 module.exports = router;

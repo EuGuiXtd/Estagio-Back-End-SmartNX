@@ -11,10 +11,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(15)
       },
-      body: {
-        type: Sequelize.STRING
+      text: {
+        type: Sequelize.STRING(300)
       },
       postId: {
         type: Sequelize.INTEGER,

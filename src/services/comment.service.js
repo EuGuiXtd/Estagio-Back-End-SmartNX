@@ -1,17 +1,17 @@
 const { Comment } = require('../models');
 const postController = require('./post.service');
 
-const addComment = async (postId, user, body) => {
-    const comment = await Comment.create({ postId, user, body });
-    const posts = await postController.getAllPosts();
-    return posts;
+const addComment = async (postId, user, text) => {
+    const comment = await Comment.create({ postId, user, text });
+    const post = await postController.getPostById(comment.postId);
+    return post;
 }
 
-const deleteComment = async (id) => {
-    const comment = await Comment.findByPk(id);
+const deleteComment = async (commentId) => {
+    const comment = await Comment.findByPk(commentId);
     await comment.destroy();
-    const posts = await postController.getAllPosts();
-    return posts;
+    const post = await postController.getPostById(comment.postId);
+    return post;
 }
 
 module.exports = {

@@ -6,22 +6,22 @@ module.exports = {
     await queryInterface.bulkInsert('Comments', [
       {
         user: 'John Doe',
-        body: 'Hello, world!',
+        text: 'Hello, world!',
         postId: 1,
       },
       {
         user: 'Jane Doe',
-        body: 'Goodbye, world!',
+        text: 'Goodbye, world!',
         postId: 1,
       },
       {
         user: 'John Doe',
-        body: 'Hello, world!',
+        text: 'Hello, world!',
         postId: 2,
       },
       {
         user: 'Jane Doe',
-        body: 'Goodbye, world!',
+        text: 'Goodbye, world!',
         postId: 2,
       },
     ], {});

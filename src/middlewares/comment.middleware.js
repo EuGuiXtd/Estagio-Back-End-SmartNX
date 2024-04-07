@@ -1,15 +1,15 @@
 const { Comment, Post } = require('../models');
 
 const validId = async (req, res, next) => {
-    const { id } = req.params;
-    const comment = await Comment.findByPk(id);
+    const { commentId } = req.params;
+    const comment = await Comment.findByPk(commentId);
     if (!comment) return res.status(404).json({ error: 'Comment not found' });
     next();
 }
 
 const validFields = async (req, res, next) => {
-    const { body } = req.body;
-    if (!body) return res.status(400).json({ error: 'Missing fields' });
+    const { text } = req.body;
+    if (!text) return res.status(400).json({ error: 'Missing fields' });
     next();
 }
 

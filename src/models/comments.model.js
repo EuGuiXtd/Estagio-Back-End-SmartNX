@@ -1,7 +1,7 @@
 const CommentModel = (sequelize, DataTypes) => {
     const Comment = sequelize.define('Comment', {
-      user: DataTypes.STRING,
-      body: DataTypes.STRING,
+      user: DataTypes.STRING(15),
+      text: DataTypes.STRING(300),
     },
     {
         timestamps: false,

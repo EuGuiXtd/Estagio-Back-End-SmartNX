@@ -14,8 +14,8 @@ const getPostById = async (id) => {
     return post;
 }
 
-const createPost = async (user, title, body) => {
-    const post = await Post.create({ user, title, body });
+const createPost = async (user, title, text) => {
+    const post = await Post.create({ user, title, text });
     return post;
 }
 

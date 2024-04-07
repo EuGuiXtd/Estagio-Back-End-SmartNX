@@ -7,12 +7,12 @@ module.exports = {
       {
         user: 'John Doe',
         title: 'Hello',
-        body: 'Hello, world!',
+        text: 'Hello, world!',
       },
       {
         user: 'Jane Doe',
         title: 'Goodbye!',
-        body: 'Goodbye, world!',
+        text: 'Goodbye, world!',
       },
     ], {});
   },

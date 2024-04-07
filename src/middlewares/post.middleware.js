@@ -8,8 +8,8 @@ const validateId = async (req, res, next) => {
 }
 
 const validateFields = async (req, res, next) => {
-    const { user, title, body } = req.body;
-    if (!user || !title || !body) return res.status(400).json({ error: 'Missing fields' });
+    const { user, title, text } = req.body;
+    if (!user || !title || !text) return res.status(400).json({ error: 'Missing fields' });
     next();
 }
 

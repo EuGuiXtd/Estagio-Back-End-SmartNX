@@ -11,13 +11,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(15)
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(50)
       },
-      body: {
-        type: Sequelize.STRING
+      text: {
+        type: Sequelize.STRING(300)
       }
     });
   },
