@@ -53,11 +53,11 @@ MySQl,Sequelize.
 - Endpoint que aceita uma requisição do tipo GET para obter apenas um post pelo seu ID específico. A URL do endpoint é `http://localhost:3001/posts/:postId` ***Obs: A parte em que está escrito ":postId" deve ser substituída pelo número do ID do post que você deseja encontrar. Por exemplo, `http://localhost:3001/posts/1` irá retornar o post com o ID 1***.Esta requisição irá retornar como resposta o post com o ID que você passou no endpoint;
 - Endpoint que aceita uma requisição do tipo POST para cadastrar um novo post. A URL do endpoint é `http://localhost:3001/posts` ***Obs: Esta requisição exige um corpo (body) contendo um objeto seguindo o seguinte modelo:
 ```
-     {  
-  "user": "string",
+{
+  "user":"string",
   "title": "string",
-  "text": "string"
-     }
+  "text":"string"
+}
 ```
 ,onde todas essas chaves são obrigatórias para a criação do novo post***.Após adicionar um novo post, esta requisição irá retornar todos os posts existentes no banco de dados;
 - Endpoint que aceita uma requisição do tipo DELETE para deletar um post existente pelo seu ID específico. A URL do enpoint é `http://localhost:3001/posts/:postId` ***Obs: A parte em que está escrito ":postId" deve ser substituída pelo número do ID do post que você deseja remover. Por exemplo, `http://localhost:3001/posts/1` irá remover o post com o ID 1***.Após excluir um post, esta requisição irá retornar como resposta todos os posts existentes no banco de dados.
@@ -66,10 +66,10 @@ MySQl,Sequelize.
 - Lembrando que todos os endpoints começam com "http://localhost:3001", onde o número 3001 é a porta onde o servidor Express está rodando em sua máquina. Caso ele esteja rodando em outra porta, lembre-se de trocar esse número no endpoint;
 - Endpoint que aceita uma requisição do tipo POST para cadastrar um novo comentário em um post específico. A URL do enpoint é `http://localhost:3001/posts/:postId/comments` ***Obs: Esta requisição exige um corpo (body) contendo um objeto seguindo o seguinte modelo:
 ```  
-     {
-  "user": "string",
-  "text": "string"
-     }
+{
+  "user":"string",
+  "text":"string"
+}
 ```
 ,onde apenas a chave "text" é obrigatória para cadastrar um novo comentário em um post. Caso o usuário queira publicar um comentário anônimo, a chave "user" pode ser omitida. Além disso, onde está escrito ":postId" deve ser substituído pelo número do ID do post em que você deseja adicionar o seu comentário. Por exemplo, `http://localhost:3001/posts/1/comments` irá adicionar um comentário ao post com ID igual a 1***.Essa requisição irá retornar como resposta o post ao qual você adicionou o comentário;
 - Endpoint que aceita uma requisição do tipo DELETE para deletar um comentário existente em um post específico. A URL do enpoint é `http://localhost:3001/posts/:postId/comments/:commentId` ***Obs: A parte em que está escrito ":postId" deve ser substituída pelo número do ID do post em que você deseja remover o comentário, e onde está escrito ":commentId" deve ser substituído pelo ID do comentário que você deseja excluir no post selecionado. Por exemplo, `http://localhost:3001/posts/1/comments/1` irá excluir o comentário com ID 1 no post com ID 1***.Essa requisição irá retornar como resposta o post do qual você removeu o comentário.
