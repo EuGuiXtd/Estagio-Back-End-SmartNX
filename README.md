@@ -59,7 +59,7 @@ MySQl,Sequelize.
   "text":"string"
 }
 ```
-,onde todas essas chaves são obrigatórias para a criação do novo post***.Após adicionar um novo post, esta requisição irá retornar todos os posts existentes no banco de dados;
+onde todas essas chaves são obrigatórias para a criação do novo post***.Após adicionar um novo post, esta requisição irá retornar todos os posts existentes no banco de dados;
 - Endpoint que aceita uma requisição do tipo DELETE para deletar um post existente pelo seu ID específico. A URL do enpoint é `http://localhost:3001/posts/:postId` ***Obs: A parte em que está escrito ":postId" deve ser substituída pelo número do ID do post que você deseja remover. Por exemplo, `http://localhost:3001/posts/1` irá remover o post com o ID 1***.Após excluir um post, esta requisição irá retornar como resposta todos os posts existentes no banco de dados.
 
 ## Endpoints de comments:
@@ -71,7 +71,7 @@ MySQl,Sequelize.
   "text":"string"
 }
 ```
-,onde apenas a chave "text" é obrigatória para cadastrar um novo comentário em um post. Caso o usuário queira publicar um comentário anônimo, a chave "user" pode ser omitida. Além disso, onde está escrito ":postId" deve ser substituído pelo número do ID do post em que você deseja adicionar o seu comentário. Por exemplo, `http://localhost:3001/posts/1/comments` irá adicionar um comentário ao post com ID igual a 1***.Essa requisição irá retornar como resposta o post ao qual você adicionou o comentário;
+onde apenas a chave "text" é obrigatória para cadastrar um novo comentário em um post. Caso o usuário queira publicar um comentário anônimo, a chave "user" pode ser omitida. Além disso, onde está escrito ":postId" deve ser substituído pelo número do ID do post em que você deseja adicionar o seu comentário. Por exemplo, `http://localhost:3001/posts/1/comments` irá adicionar um comentário ao post com ID igual a 1***.Essa requisição irá retornar como resposta o post ao qual você adicionou o comentário;
 - Endpoint que aceita uma requisição do tipo DELETE para deletar um comentário existente em um post específico. A URL do enpoint é `http://localhost:3001/posts/:postId/comments/:commentId` ***Obs: A parte em que está escrito ":postId" deve ser substituída pelo número do ID do post em que você deseja remover o comentário, e onde está escrito ":commentId" deve ser substituído pelo ID do comentário que você deseja excluir no post selecionado. Por exemplo, `http://localhost:3001/posts/1/comments/1` irá excluir o comentário com ID 1 no post com ID 1***.Essa requisição irá retornar como resposta o post do qual você removeu o comentário.
 
 # Obrigado por ler até aqui!
