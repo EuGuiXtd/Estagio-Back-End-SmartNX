@@ -1,7 +1,7 @@
 const {peoples} = require ('./utils');
 
-function sortPeoplesByAge (peoples) {
-    return peoples.sort((a, b) => {
+function sortPeoplesByAge (persons) {
+    return persons.sort((a, b) => {
         if (a.idade === b.idade) {
             return b.id - a.id;
         }

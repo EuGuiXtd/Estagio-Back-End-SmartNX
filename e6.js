@@ -6,9 +6,9 @@ const cep = '36045330'
 const api = axios.create({
     baseURL: `https://viacep.com.br/ws/`
 })
-const getCEP = async (cep) => {
+const getCEP = async (address) => {
     try {
-        const response = await api.get(`${cep}/json/`)
+        const response = await api.get(`${address}/json/`)
         const { logradouro, bairro, localidade, uf } = response.data
         console.log(`${logradouro}, ${bairro}, ${localidade}/${uf}`)
     } catch (error) {
